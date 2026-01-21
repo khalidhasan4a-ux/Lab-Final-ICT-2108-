@@ -1,1 +1,35 @@
-ICT
+class ReverseArray {
+
+    // Function to reverse the array
+    static void reverse(double[] arr) {
+        int start = 0;
+        int end = arr.length - 1;
+
+        while (start < end) {
+            // swap arr[start] and arr[end]
+            double temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+
+            start++;
+            end--;
+        }
+    }
+
+    // Main method to test the function
+    public static void main(String[] args) {
+        double[] values = {5.8, 2.6, 9.0, 3.4, 7.1};
+
+        System.out.println("Before reversing:");
+        for (double v : values) {
+            System.out.print(v + " ");
+        }
+
+        reverse(values); // function call
+
+        System.out.println("\nAfter reversing:");
+        for (double v : values) {
+            System.out.print(v + " ");
+        }
+    }
+}
